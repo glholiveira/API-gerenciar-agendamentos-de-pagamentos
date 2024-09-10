@@ -3,19 +3,19 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import Agendamento
-from .serializers import AgendamentoSerializer
+from .serializers import AgendamentoSerializerGravacao,AgendamentoSerializerLeitura
 
 @api_view(['GET', 'POST'])
 def agendamentos(request):
     if request.method == 'GET':
         # Listar todos os agendamentos
         agendamentos = Agendamento.objects.all()
-        serializer = AgendamentoSerializer(agendamentos, many=True)
+        serializer = AgendamentoSerializerLeitura(agendamentos, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
         # Criar um novo agendamento
-        serializer = AgendamentoSerializer(data=request.data)
+        serializer = AgendamentoSerializerGravacao(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -30,7 +30,7 @@ def agendamento_detail(request, id):
 
     if request.method == 'GET':
         # Consultar agendamento pelo id
-        serializer = AgendamentoSerializer(agendamento)
+        serializer = AgendamentoSerializerLeitura(agendamento)
         return Response(serializer.data)
 
     elif request.method == 'DELETE':
