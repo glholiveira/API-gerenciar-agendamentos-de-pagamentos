@@ -3,70 +3,73 @@
 Este projeto é uma API RESTful construída com Django e Django REST Framework para gerenciar agendamentos de pagamentos. A API suporta operações como listar, criar, consultar e deletar agendamentos utilizando métodos HTTP (GET, POST, DELETE) com uma única URL para cada operação.
 
 # Requisitos
-Python 3.x
-Django 5.1.1
-Django REST Framework
+
+    Python 3.x
+    Django 5.1.1
+    Django REST Framework
 
 
-# Instalação
+## Instalação
 
-Clone este repositório:
-
-git clone LINK
-cd seu-repositorio
-
-# Crie um ambiente virtual e ative-o:
-
-python -m venv venv
-source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
-
-# Instale as dependências:
-
-pip install -r requirements.txt
-
-
-# Execute as migrações do banco de dados:
-
-python manage.py migrate
-
-
-# Inicie o servidor de desenvolvimento:
-
-python manage.py runserver
+    # Clone este repositório:
+    
+        git clone https://github.com/glholiveira/API-gerenciar-agendamentos-de-pagamentos.git
+    
+    # Crie um ambiente virtual e ative-o:
+    
+        python -m venv venv
+        source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
+    
+    # Instale as dependências:
+    
+        pip install -r requirements.txt
+    
+    # Acesse a pasta do projeto 
+    
+        cd pagamento_project/
+    
+    # Execute as migrações do banco de dados:
+    
+        python manage.py migrate
+    
+    
+    # Inicie o servidor de desenvolvimento:
+    
+        python manage.py runserver
 
 ## Uso da API:
 
-# Endpoints
-
-Listar agendamentos
-    GET /api/agendamentos/
-    Retorna todos os agendamentos cadastrados.
-
-Consultar agendamento por ID
-    GET /api/agendamentos/{id}/
-    Retorna o agendamento específico pelo ID.
-
-Criar agendamento
-    POST /api/agendamentos/
-    Cria um novo agendamento. Enviar um JSON com os dados do agendamento no corpo da requisição.
-json
-
-{
-  "data_pagamento": "2024-11-10",
-  "permite_recorrencia": true,
-  "quantidade_recorrencia": 1,
-  "intervalo_recorrencia": 30,
-  "status_recorrencia": "ativo",
-  "agencia": 124545434545,
-  "conta": 56555789,
-  "valor_pagamento": 25.50
-}
-
-
-Deletar agendamento
-    DELETE /api/agendamentos/{id}/
-    Deleta um agendamento específico pelo ID.
-
+    # Endpoints
+    
+    Listar agendamentos
+        GET /api/agendamentos/
+        Retorna todos os agendamentos cadastrados.
+    
+    Consultar agendamento por ID
+        GET /api/agendamentos/{id}/
+        Retorna o agendamento específico pelo ID.
+    
+    Criar agendamento
+        POST /api/agendamentos/
+        Cria um novo agendamento. Enviar um JSON com os dados do agendamento no corpo da requisição.
+    json
+    
+    {
+      "data_pagamento": "2024-11-10",
+      "permite_recorrencia": true,
+      "quantidade_recorrencia": 1,
+      "intervalo_recorrencia": 30,
+      "status_recorrencia": "ativo",
+      "agencia": 124545434545,
+      "conta": 56555789,
+      "valor_pagamento": 25.50
+    }
+    
+    
+    Deletar agendamento
+        DELETE /api/agendamentos/{id}/
+        Deleta um agendamento específico pelo ID.
+    
 # Testes
 Para rodar os testes, use o comando:
 
