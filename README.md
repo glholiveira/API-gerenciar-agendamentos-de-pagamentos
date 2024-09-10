@@ -12,9 +12,9 @@ Este projeto é uma API RESTful construída com Django e Django REST Framework p
 ## Instalação
 
     # Clone este repositório:
-    
+    bash```
         git clone https://github.com/glholiveira/API-gerenciar-agendamentos-de-pagamentos.git
-    
+    ```
     # Crie um ambiente virtual e ative-o:
     
         python -m venv venv
