@@ -1,0 +1,62 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+env/
+venv/
+*.env
+.venv/
+# Django
+*.log
+*.sqlite3
+db.sqlite3
+
+# Local environment
+.local/
+*.local
+
+# IDEs
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.ncb
+*.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Static and media files
+static/
+media/
+
+# Coverage reports
+.coverage
+*.cover
+coverage.xml
+nosetests.xml
+*.cover
+*.py,cover
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+eggs-info/
+pip-wheel-metadata/
+__pypackages__/
+*.egg-info/
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
