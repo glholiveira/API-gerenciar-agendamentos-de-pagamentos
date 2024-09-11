@@ -1,6 +1,6 @@
-## Gerenciamento de Agendamentos / Pagamentos 
+# Gerenciamento de Agendamentos / Pagamentos 
 
-Este projeto é uma API RESTful construída com Django e Django REST Framework para gerenciar agendamentos de pagamentos. A API suporta operações como listar, criar, consultar e deletar agendamentos utilizando métodos HTTP (GET, POST, DELETE) com uma única URL para cada operação.
+#### Este projeto é uma API RESTful construída com Django e Django REST Framework para gerenciar agendamentos de pagamentos. A API suporta operações como listar, criar, consultar e deletar agendamentos utilizando métodos HTTP (GET, POST, DELETE) com uma única URL para cada operação.
 
 # Requisitos
 
@@ -39,21 +39,21 @@ python manage.py runserver
  ```
 # Uso da API:
 
-#### Endpoints
+### Endpoints
     
-    Listar agendamentos
+#### Listar agendamentos
         GET /api/agendamentos/
         Retorna todos os agendamentos cadastrados.
     
-    Consultar agendamento por ID
+#### Consultar agendamento por ID
         GET /api/agendamentos/{id}/
         Retorna o agendamento específico pelo ID.
     
-    Criar agendamento
+#### Criar agendamento
         POST /api/agendamentos/
         Cria um novo agendamento. Enviar um JSON com os dados do agendamento no corpo da requisição.
-    json
-    
+#### json
+   ```bash   
     {
       "data_pagamento": "2024-11-10",
       "permite_recorrencia": true,
@@ -64,13 +64,13 @@ python manage.py runserver
       "conta": 56555789,
       "valor_pagamento": 25.50
     }
+   ```
     
-    
-    Deletar agendamento
-        DELETE /api/agendamentos/{id}/
-        Deleta um agendamento específico pelo ID.
+#### Deletar agendamento
+    DELETE /api/agendamentos/{id}/
+    Deleta um agendamento específico pelo ID.
     
 # Testes
-Para rodar os testes, use o comando:
-
+#### Para rodar os testes, use o comando:
+```bash   
 python manage.py test
