@@ -10,36 +10,36 @@ Este projeto é uma API RESTful construída com Django e Django REST Framework p
 
 
 ## Instalação
+#### Clone este repositório:
+```bash
+git clone https://github.com/glholiveira/API-gerenciar-agendamentos-de-pagamentos.git
+ ```
+#### Crie um ambiente virtual e ative-o:
+```bash
+python -m venv venv
+source venv/bin/activate  
 
-    # Clone este repositório:
-    ```bash
-        git clone https://github.com/glholiveira/API-gerenciar-agendamentos-de-pagamentos.git
-    ```
-    # Crie um ambiente virtual e ative-o:
-    
-        python -m venv venv
-        source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
-    
-    # Instale as dependências:
-    
-        pip install -r requirements.txt
-    
-    # Acesse a pasta do projeto 
-    
-        cd pagamento_project/
-    
-    # Execute as migrações do banco de dados:
-    
-        python manage.py migrate
-    
-    
-    # Inicie o servidor de desenvolvimento:
-    
-        python manage.py runserver
+No Windows, use 'venv\Scripts\activate'
+```
+#### Instale as dependências:
+```bash    
+pip install -r requirements.txt
+   ```
+#### Acesse a pasta do projeto 
+```bash    
+cd pagamento_project/
+   ```
+#### Execute as migrações do banco de dados:
+```python
+python manage.py migrate
+   ```
+## Inicie o servidor de desenvolvimento:
+```python
+python manage.py runserver
+ ```
+# Uso da API:
 
-## Uso da API:
-
-    # Endpoints
+#### Endpoints
     
     Listar agendamentos
         GET /api/agendamentos/
