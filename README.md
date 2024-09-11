@@ -44,6 +44,26 @@ python manage.py runserver
 # Uso da API:
 
 ### Endpoints
+
+#### Criar agendamento
+        POST /api/agendamentos/
+        Cria um novo agendamento. Enviar um JSON com os dados do agendamento no corpo da requisição.
+##### curl - criação de agendamento
+```bash           
+curl --location 'http://127.0.0.1:8000/api/agendamentos/' \
+--header 'Content-Type: application/json' \
+--data '{
+  "data_pagamento": "2024-01-10",
+  "permite_recorrencia": true,
+  "quantidade_recorrencia": 1,
+  "intervalo_recorrencia": 30,
+  "status_recorrencia": "ativo",
+  "agencia": 124545434545,
+  "conta": 56555789,
+  "valor_pagamento": 4444.44
+}
+'
+```
     
 #### Listar agendamentos
         GET /api/agendamentos/
@@ -65,25 +85,6 @@ curl --location 'http://127.0.0.1:8000/api/agendamentos/' \
 curl --location 'http://127.0.0.1:8000/api/agendamentos/<id>/' \
 --data ''
    ```
-#### Criar agendamento
-        POST /api/agendamentos/
-        Cria um novo agendamento. Enviar um JSON com os dados do agendamento no corpo da requisição.
-##### curl - criação de agendamento
-```bash           
-curl --location 'http://127.0.0.1:8000/api/agendamentos/' \
---header 'Content-Type: application/json' \
---data '{
-  "data_pagamento": "2024-01-10",
-  "permite_recorrencia": true,
-  "quantidade_recorrencia": 1,
-  "intervalo_recorrencia": 30,
-  "status_recorrencia": "ativo",
-  "agencia": 124545434545,
-  "conta": 56555789,
-  "valor_pagamento": 4444.44
-}
-'
-```
     
 #### Deletar agendamento
     DELETE /api/agendamentos/{id}/
