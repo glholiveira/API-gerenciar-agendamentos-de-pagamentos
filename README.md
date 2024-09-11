@@ -17,6 +17,10 @@ git clone https://github.com/glholiveira/API-gerenciar-agendamentos-de-pagamento
 #### Crie um ambiente virtual e ative-o:
 ```bash
 python -m venv venv
+source venv/bin/activate
+
+Caso de erro, você está com o python3
+python3 -m venv venv
 source venv/bin/activate  
 
 No Windows, use 'venv\Scripts\activate'
